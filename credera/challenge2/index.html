@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Credera | SecureCo Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <nav class="main-nav container-fluid">
+                <div class="col-md-3">
+                    <img class="nav-logo" src="assets/logo.png" alt="SecureCo"/>
+                </div>
+                <div class="nav-button-group main-nav-buttons col-md-9">
+                    <button class="nav-button nav-button--default nav-button--combobox" type="button">Devices</button>
+                    <button class="nav-button nav-button--default nav-button--combobox" type="button">Assessments</button>
+                    <button class="nav-button nav-button--default nav-button--combobox" type="button">Administration</button>
+                    <button class="nav-button nav-button--accent nav-button--combobox-before" type="button">Toolbox</button>
+                </div>
+                <div class="nav-hamburger-menu main-nav-buttons col-md-9">
+                    <div id="hamburger_button" class="hamburger-button fas fa-bars">
+                        <span class="hidden-text">Menu</span>
+                    </div>
+                    <div class="hamburger-menu-items">
+                        <a href="#">Devices</a>
+                        <a href="#">Assessments</a>
+                        <a href="#">Administration</a>
+                        <a href="#">Toolbox</a>
+                        <a class="filter-link" href="#">Filter</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="sub-nav container-fluid">
+                <div class="col-md-6 sub-nav-searchbar">
+                    <div>Enterprise Domain Name</div>
+                    <div class="searchbar-container">
+                        <label for="domain_search_input" class="hidden-text">Search In Domain</label>
+                        <input id="domain_search_input" class="domain-search-input" type="text" placeholder="Search In Domain"/>
+                        <button type="button" class="fas fa-search domain-search-button">
+                            <span class="hidden-text">Search In Domain</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 sub-nav-options">
+                    <div class="toggle-button-container">
+                        <button type="button">
+                            <span class="fas fa-tachometer-alt" aria-hidden="true"></span>
+                            <span class="hidden-text">Metrics</span>
+                        </button>
+                        <button type="button">
+                            <span class="fas fa-list" aria-hidden="true"></span>
+                            <span class="hidden-text">Detail View</span>
+                        </button>
+                        <button type="button">
+                            <span class="fas fa-code-branch" aria-hidden="true"></span>
+                            <span class="hidden-text">Source Code</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-fluid">
+                <section class="data-section col-md-6">
+                    <div class="data-section-title">Control Failures by Device (Top 5)</div>
+                    <canvas id="chart_1" class="chartjs-render-monitor" style="display: block; height: 150px; width: 300px;"></canvas>                </section>
+                <section class="data-section col-md-6">
+                    <div class="data-section-title">Configuration Assessment SCI Scoring (12 Month History)</div>
+                    <canvas id="chart_2" class="chartjs-render-monitor" style="display: block; height: 301px; width: 602px;"></canvas>
+                </section>
+            </div>
+            <div class="container-fluid">
+                <section class="data-section col-md-4">
+                    <div class="data-section-title data-section-title--table">
+                        <h3>Devices Needing Attention</h3>
+                        <a href="#">View All &raquo;</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Device</th>
+                                <th class="random-dot-header">Change</th>
+                                <th class="random-dot-header">Retrieval</th>
+                                <th class="random-dot-header">Log</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>93KDA-1DD-1</td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                </tr>
+                                <tr>
+                                    <td>39CJ08-22</td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                </tr>
+                                <tr>
+                                    <th>D3EDC-2-112</th>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                </tr>
+                                <tr>
+                                    <td>D30S-12W</td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                </tr>
+                                <tr>
+                                    <td>D3E9H-AA0</td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                    <td class="random-dot"></td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="data-section col-md-4">
+                    <div class="data-section-title data-section-title--table">
+                        <h3>Recently Changed Devices</h3>
+                        <a href="#">View All &raquo;</a>
+                    </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Device</th>
+                                    <th>Date of Change</th>
+                                    <th>Type of Change(s)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>93KDA-1DD-1</td>
+                                        <td>08/06/92</td>
+                                        <td>ADD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>39CJ08-22</td>
+                                        <td>08/06/92</td>
+                                        <td>DELETE/MODIFY</td>
+                                    </tr>
+                                    <tr>
+                                        <th>D3EDC-2-112</th>
+                                        <td>08/06/92</td>
+                                        <td>ADD/DELETE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>D30S-12W</td>
+                                        <td>08/06/92</td>
+                                        <td>MODIFY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>D3E9H-AA0</td>
+                                        <td>08/06/92</td>
+                                        <td>ADD/MODIFY</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                </section>
+                <section class="data-section col-md-4">
+                    <div class="data-section-title">
+                        <h3>Devices By Rule Count</h3>
+                        <a href="#">View All &raquo;</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Device</th>
+                                <th>Rule Count</th>
+                                <th>Removeable Rule Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>93KDA-1DD-1</td>
+                                    <td>1233</td>
+                                    <td>7633</td>
+                                </tr>
+                                <tr>
+                                    <td>39CJ08-22</td>
+                                    <td>0892</td>
+                                    <td>143</td>
+                                </tr>
+                                <tr>
+                                    <th>D3EDC-2-112</th>
+                                    <td>0021</td>
+                                    <td>1117</td>
+                                </tr>
+                                <tr>
+                                    <td>D30S-12W</td>
+                                    <td>2214</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>D3E9H-AA0</td>
+                                    <td>0091</td>
+                                    <td>92</td>
+                                </tr>
+                        </tbody>
+                    </table>
+            </section>           
+            </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

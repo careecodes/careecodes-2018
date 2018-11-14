@@ -1,0 +1,14 @@
+/* Overriding some weirdness in reveal.css */
+
+.ihategit h3 {
+    text-transform: none;
+    margin-bottom: 50px;
+}
+
+sup a {
+    text-decoration: underline;
+}
+
+.ihategit li {
+    margin-bottom: 25px;
+}

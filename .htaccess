@@ -1,0 +1,2 @@
+RewriteEngine On
+Redirect /test/caree.html http://caree.codes/test/caree-new.html

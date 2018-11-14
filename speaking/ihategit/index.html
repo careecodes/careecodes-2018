@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>I Hate Git | Caree Youngman</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/ihategit.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal ihategit">
+			<div class="slides">
+				<section>
+					<section>
+						<h3>Welcome! 👋</h3>
+						<h3>Before we get started:</h3>
+						<ul>
+							<li>Make sure you have a local Git installation <a href="https://git-scm.com/">(https://git-scm.com/)</a></li>
+							<li>Pull up your command line tool of choice</li>
+							<li>Log into GitHub - or make an account if you don't have one yet</li>
+							<li>Join us on Slack - ask a volunteer how</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>About Me - The Past 👶</h3>
+						<ul>
+							<li>Began coding when I was 11</li>
+							<li>Dropped out of college, (re)taught myself how to code, and began freelancing</li>
+							<li>Moved to Dallas in 2015 and began to work full time in software dev, primarily frontend.</li>	
+						</ul>
+					</section>
+					<section>
+						<h3>About Me - The Present 🎁</h3>
+						<ul>
+							<li>Engineering Manager at Creative Market</li>
+							<li>Director of Women Who Code DFW</li>
+							<li>Full-time student</li>
+							<li>During the day, I spend most of my time doing <i>Manager Stuff&trade;</i></li>
+							<li>Several side projects and some freelance work that keeps my hand in code.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>About Me - The Future 🚀</h3>
+						<ul>
+							<li>UI/UX Engineering Manager of Creative Market</li>
+							<li>Design Systems and User Testing</li>
+							<li>Mentor others, speak at more events, and write more</li>
+							<li>FINALLY FINISH MY PORTFOLIO??</li>
+						</ul>
+					</section>
+					<section>
+						<h3>What I'm Passionate About</h3>
+						<ul>
+							<li>Creating great User Experiences and bringing beautiful design to life using code</li>
+							<li>Creating opportunity for others, and helping people reach their potential</li>
+							<li>Building teams and environments that make people excited to go to work everyday</li>
+							<li>Learning and growing <i>every damn day</i></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Connect with Me</h3>
+						<ul>
+							<li>@CareeCodes on Twitter, Instagram, and almost everywhere else.</li>
+							<li><a href="http://caree.codes">http://caree.codes</a></li>
+							<li><a href="blog.caree.codes">blog.caree.codes</a></li>
+							<li>Reach out to me on the WWCodeDFW Slack.</li>							
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section><h3>Intro to Git and Github</h3></section>
+					<section><h3>Git it, gURL</h3></section>
+					<section><h3>I Hate Git</h3>
+						<img src="assets/tableflip.png">
+					</section>
+				</section>
+
+				<section>
+					<section><img src="assets/whatisgithub.jpg"></section>
+					<section><img src="assets/pleasehireme.jpg"></section>
+					<section><img src="assets/myrepos.png" style="max-height:75vh;"></section>
+					<section><img src="assets/noidea.png" style="max-height:75vh;"></section>
+				</section>
+
+				<section>
+					<h3>General Advice</h3>
+					<ul>
+						<li>Save and push to your remote branch often</li>
+						<li>K.I.S.S. (And consult your rubber duck often<sup><a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="blank">4</a></sup>)</li>
+						<li>Google stuff if you need to, and ask for help</li>
+					</ul>
+				</section>
+
+				<section><h3>My goal for this workshop...</h3></section>
+
+				<section>
+					<section><h3>What's the difference between Git and GitHub?</h3></section>
+					<section>Git is a version control system.</section>
+					<section>GitHub is a hosting service for Git repositories.</section>
+				</section>
+
+				<section>
+					<section>
+						Version control systems are a category of software tools that help a software team manage changes to source code over time.<sup><a href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank">1</a></sup>
+					</section>
+					<section>
+						<h3>Version Control is helpful for...</h3> 
+						<ul>
+							<li>Collaboration</li>
+							<li>Source of truth and record</li>
+							<li>Maintaining multiple versions of the same software</li>
+						</ul>
+					</section>
+					<section>
+						Almost all software companies use a form of version control. And the ones who don’t, should!
+					</section>
+					<section>
+						There are a several different version control systems, but Git is the most popular one.<sup><a href="https://rhodecode.com/insights/version-control-systems-2016" target="_blank">2</a></sup>
+					</section>
+					<section>
+						There are a lot of ways to interact with a version control system, but a universal method that you'll encounter at 
+						almost any job is using the command line.
+					</section>
+				</section>
+
+				<section><h3>Vocab Time! 🤓</h3></section>
+
+				<section>
+					<section><i>Repository</i></section>
+					<section>Very simply, a repository is a bucket where your source code lives.</section>
+					<section>Git repositories contain all of your source code, plus the <i>history</i> of your source code.</section>
+				</section>
+
+				<section>
+					<section><i>Branch</i></section>
+					<section>
+						<ul>
+							<li>A branch is essentially an independent line of development.</li>
+							<li>
+								You can take advantage of branching when working on new features or bug fixes because it 
+								solates your work from that of other team members.<sup><a href="https://backlog.com/git-tutorial/using-branches/" target="_blank">5</a></sup>						
+							</li>							
+						</ul>
+					</section>
+					<section>
+						<img src="assets/branching.png">
+					</section>
+				</section>
+
+				<section><h3>Let's learn some commands!</h3></section>
+
+				<section>
+					<section><i>git init</i></section>
+					<section>
+						Creates a new local repository
+					</section>
+				</section>
+
+				<section>
+					<section><i>git clone</i></section>
+					<section>
+						Creates a copy of a remote repository on your local machine.
+					</section>
+				</section>
+
+				<section>
+					<section><i>git status</i></section>
+					<section>
+						Tells you which files have changed, and files you still need to add to staging or commit.
+					</section>
+				</section>
+
+				<section>
+					<section><i>git checkout</i></section>
+					<section>
+						Changes you from one branch to another
+					</section>
+				</section>
+
+				<section>
+					<section><i>git pull</i></section>
+					<section>
+						Pulls changes from the remote repository into your local repository
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<i>git add</i>
+					</section>	
+					<section>
+						git add stages changes to be committed
+					</section>	
+					<section>
+						staging is basically a holding area where you put files that you want to commit.
+					</section>
+					<section>
+						<i>git add myFileName.js</i><br/>
+						<i>git add .</i>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<i>git commit</i>
+					</section>
+					<section>
+						<ul>
+							<li>Creates a commit and saves it to your repository</li>
+							<li>You have to add your changes to staging before you can commit</li>
+							<li>You must include a commit message when commiting changes.</li>
+						</ul>
+					</section>
+					<section>
+						<i>git commit -m "This is my commit message!"</i>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						Commit messages are used to communicate...
+					</section>
+					<section>
+						<h3>To ask questions</h3>
+						<img style="max-height:35vh;" src="assets/toquestion.png">
+					</section>
+					<section>
+						<h3>To celebrate project milestones</h3>
+						<img style="max-height:35vh;" src="assets/tocelebrate.png">
+					</section>
+					<section>
+						<h3>To give a colleague constructive feedback</h3>
+						<img style="max-height:35vh;" src="assets/feedback.png">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						A good commit message is <b>descriptive</b> and <b>well-formatted.</b><sup><a href="https://chris.beams.io/posts/git-commit/" target="_blank">3</a></sup>
+						Sometimes teams and companies have guidelines on how to format commit messages.	
+					</section>
+					<section>
+						<img src="assets/drake.jpg">						
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<i>git push</i>
+					</section>
+					<section>
+						This command “Pushes” your local repository changes to your remote repository. 
+						You have to commit your changes before you can push!
+					</section>
+				</section>
+
+				<section>
+					<section>git branch</section>
+					<section>
+						<ul>
+							<li>Creates a new branch</li>
+						</ul>
+					</section>
+					<section>
+						<i>git branch new-branch-name</i><br/>
+						<i>git checkout -b new-branch-name</i>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<ol>
+							<h3>Sources</h3>
+							<li><a href="https://www.atlassian.com/git/tutorials/what-is-version-control">What is Version Control?</a></li>
+							<li><a href="https://rhodecode.com/insights/version-control-systems-2016">Version Control Popularity in 2016</a></li>
+							<li><a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck Debugging </a></li>
+							<li><a href="https://backlog.com/git-tutorial/using-branches/">Using Git Branching</a></li>
+						</ol>						
+					</section>
+					<section>
+						<ul>
+							<h3>Additional Learning Resources </h3>
+							<li><a href="https://www.youtube.com/watch?v=1h9_cB9mPT8&t=">GitHub for Noobs (Youtube Course)</a></li>
+							<li><a href="https://www.atlassian.com/git">Getting Git Right (Atlassian)</a></li>
+							<li><a href="https://git-scm.com/">Git documentation</a></li>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
